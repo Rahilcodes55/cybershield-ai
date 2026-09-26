@@ -20,7 +20,8 @@ export default function Detector({ type }) {
     setResult(null);
 
     try {
-      const response = await fetch('http://localhost:3001/api/analyze', {
+      // YAHAN LINK UPDATE KIYA GAYA HAI
+      const response = await fetch('https://cybershield-ai-vr4c.onrender.com/api/analyze', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ type, content: input })

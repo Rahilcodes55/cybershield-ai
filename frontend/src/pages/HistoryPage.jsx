@@ -9,14 +9,16 @@ export default function HistoryPage() {
   }, []);
 
   const fetchHistory = () => {
-    fetch('http://localhost:3001/api/history')
+    // YAHAN LINK UPDATE KIYA GAYA HAI
+    fetch('https://cybershield-ai-vr4c.onrender.com/api/history')
       .then(res => res.json())
       .then(data => setHistory(data));
   };
 
   const deleteRecord = async (id) => {
     if(!window.confirm("Delete this record?")) return;
-    await fetch(`http://localhost:3001/api/history/${id}`, { method: 'DELETE' });
+    // YAHAN LINK UPDATE KIYA GAYA HAI
+    await fetch(`https://cybershield-ai-vr4c.onrender.com/api/history/${id}`, { method: 'DELETE' });
     fetchHistory();
   };
 

@@ -5,7 +5,8 @@ export default function Dashboard() {
   const [stats, setStats] = useState({ total: 0, low: 0, medium: 0, high: 0 });
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/stats')
+    // YAHAN LINK UPDATE KIYA GAYA HAI
+    fetch('https://cybershield-ai-vr4c.onrender.com/api/stats')
       .then(res => res.json())
       .then(data => setStats(data))
       .catch(err => console.error("Error fetching stats:", err));
